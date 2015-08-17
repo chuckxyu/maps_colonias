@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Scripts/jquery-1.9.0.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 9pt;
+            font-weight: normal;
+            text-decoration: none;
+            color: #000000;
+        }
+    </style>
+    <script src="http://maps.google.com/maps/api/js?v=3.4&sensor=false" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/funciones_mapa.js"></script>
+    <script type="text/javascript" src="scripts/fusion_map_obj_v3.js"></script>
+    <script type="text/javascript" src="http://mapas.inegi.org.mx/earth_map/query?request=Json&var=geeServerDefs"></script>
+</head>
+<body onload="inicializa();">
+    <table>
+        <tr>
+            <td><div id="divLista" style="height:327px; width:345px; overflow-y:scroll;"></div></td>
+            <td style="vertical-align:top;"><div id="map_canvas" style="height:327px; width:480px;"></div></td>
+        </tr>
+    </table>
+</body>
+</html>
