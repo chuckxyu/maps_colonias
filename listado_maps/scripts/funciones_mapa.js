@@ -1,6 +1,6 @@
 function inicializa() {
     construccionLista();
-    var zoomI = 14;
+    var zoomI = 15;
     var latI = 19.4304682;
     var lngI = -99.1613719;
     var myOptions = {
@@ -10,6 +10,8 @@ function inicializa() {
         geeServerDefs.layers[i].initialState = false;
     }
     gmap = new GFusionMap("map_canvas", geeServerDefs, myOptions);
+
+    $( "#inp_1046" ).click();
 }
 
 var codHtml = '';
@@ -26,7 +28,7 @@ function crearListado(lista, num) {
     var isfolder = false;
 	var viewIdLayer = '';
     for (var i = 0; i < lista.layers.length; i++) {
-        var btn = '<input type="checkBox" onclick="enciendeApagaCapa(\'0-' + lista.layers[i].id + '\');">';
+        var btn = '<input id="inp_'+ lista.layers[i].id+'" type="checkBox" onclick="enciendeApagaCapa(\'0-' + lista.layers[i].id + '\');">';
         if (lista.layers[i].isFolder) {
             btn = '<a href="javascript:buscarCapa(null,\'' + lista.layers[i].id + '\');"><img id="img_' + lista.layers[i].id + '" src="img/minus.png"></a>&nbsp;';
             isfolder = true;
